@@ -447,8 +447,8 @@ function showOverlay(type){
 function shareOnTwitter(){
   const mag=game.level+1,isWin=game.level>=8;
   const text=isWin
-    ?`🏆 I conquered ALL 9 Magnitudes of Rocky Run with ${game.score} pts! Can you do better?`
-    :`⭐️ I reached Magnitude ${mag} in Rocky Run with ${game.score} pts! Can you do better?`;
+    ?`🏆 In special game for @SeismicSys \nI conquered ALL 9 Magnitudes of Rocky Run with a score of ${game.score}! \nThanks to @bukhlak88 for an interesting game`
+    :`⭐️ In special game for @SeismicSys \nI reached Magnitude ${mag} in Rocky Run with ${game.score} points! \nThanks to @bukhlak88 for an interesting game\nThink you can do better?`;
   window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`,'_blank');
 }
 function startGame(){document.getElementById('overlay').style.display='none';initGame();game.state='playing';loadLevel(0);updateUI();}
